@@ -2,6 +2,11 @@
 
 Extract an IndoorGML dual-space network into [pgRouting](https://pgrouting.org/) and compute shortest paths — without modifying IndoorGML Core tables.
 
+This project is based on the **IndoorGML 2.0 SQL encoding** (PostgreSQL/PostGIS), which maps the [OGC IndoorGML 2.0 Part 1 – Conceptual Model](https://docs.ogc.org/is/22-045r5/22-045r5.html) to relational tables. The schema and encoding follow the OGC IndoorGML SWG Part II SQL materials:
+
+- [IndoorGML 2.0 SQL encoding (Part II / SQL)](https://github.com/opengeospatial/IndoorGML-SWG/tree/master/IndoorGML2/IndoorGML2_metanorma/Part%20II/SQL)
+- [OGC IndoorGML 2.0 Part 1 – Conceptual Model (22-045r5)](https://docs.ogc.org/is/22-045r5/22-045r5.html)
+
 ## Example: PUN-IT shortest path
 
 Dataset: [`data/sample-PUN-IT-2026-05-06.gml`](data/sample-PUN-IT-2026-05-06.gml) (dual-space layer `DS1`: 218 nodes, 229 edges).
