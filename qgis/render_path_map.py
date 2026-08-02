@@ -38,8 +38,8 @@ from qgis.core import (  # noqa: E402
 from qgis.PyQt.QtCore import QSize, QTimer  # noqa: E402
 from qgis.PyQt.QtGui import QColor, QImage, QPainter  # noqa: E402
 
-OUT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUT_PNG = os.path.join(OUT_DIR, "pun_it_shortest_path.png")
+OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs", "images")
+OUT_PNG = os.path.join(OUT_DIR, "punit_shortest_path.png")
 
 URI_BASE = (
     "dbname='indoorgml_punit' host=localhost port=5432 user='postgres' "
@@ -163,6 +163,7 @@ def main() -> int:
     def finished():
         painter.drawImage(0, 0, job.renderedImage())
         painter.end()
+        os.makedirs(OUT_DIR, exist_ok=True)
         image.save(OUT_PNG, "PNG")
         done["ok"] = True
         app.quit()
